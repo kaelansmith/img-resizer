@@ -30,23 +30,21 @@ This script processes all images in a directory (and its subdirectories) and cre
 
 ### Method 1: Copy and Double-Click (Recommended)
 
-1. **Copy the executable** to your image folder
+1. [**Download the executable**](https://github.com/kaelansmith/img-resizer/blob/main/img-resizer.exe)
 
-   ```
-   Copy img-resizer.exe to your Photos folder
-   ```
+2. **Copy/move the executable** to your image folder
 
-2. **Double-click** `img-resizer.exe`
+3. **Double-click** `img-resizer.exe`
 
    - A command window will open showing the progress
    - You'll see real-time updates as files are processed
 
-3. **Wait for completion**
+4. **Wait for completion**
 
    - The script will show which files are being resized or copied
    - When done, press Enter to close the window
 
-4. **Find your results** in the `Resized` folder
+5. **Find your results** in the `Resized` folder
 
 ### Method 2: Command Line
 
