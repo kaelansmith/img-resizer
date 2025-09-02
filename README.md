@@ -28,31 +28,37 @@ This script processes all images in a directory (and its subdirectories) and cre
 
 ## How to Use
 
-### Method 1: Copy and Double-Click (Recommended)
+### Step 1: Download the Right Executable
 
-1. [**Download the executable**](https://github.com/kaelansmith/img-resizer/blob/main/img-resizer.exe)
+Choose the version for your system:
 
-2. **Copy/move the executable** to your image folder
+- **Windows**: [img-resizer-windows-amd64.exe](https://github.com/kaelansmith/img-resizer/releases/latest/download/img-resizer-windows-amd64.exe)
+- **Mac Intel**: [img-resizer-darwin-amd64](https://github.com/kaelansmith/img-resizer/releases/latest/download/img-resizer-darwin-amd64)
+- **Mac Apple Silicon**: [img-resizer-darwin-arm64](https://github.com/kaelansmith/img-resizer/releases/latest/download/img-resizer-darwin-arm64)
+- **Linux**: [img-resizer-linux-amd64](https://github.com/kaelansmith/img-resizer/releases/latest/download/img-resizer-linux-amd64)
 
-3. **Double-click** `img-resizer.exe`
+### Step 2: Copy to Your Image Folder
 
-   - A command window will open showing the progress
-   - You'll see real-time updates as files are processed
+Move the downloaded executable to the folder containing your images.
 
-4. **Wait for completion**
+### Step 3: Run It
 
-   - The script will show which files are being resized or copied
-   - When done, press Enter to close the window
+**Windows:** Double-click the `.exe` file
+**Mac/Linux:** Open Terminal/Command Prompt in your image folder and run:
 
-5. **Find your results** in the `Resized` folder
+```bash
+./img-resizer-darwin-amd64  # or whatever version you downloaded
+```
 
-### Method 2: Command Line
+### Step 4: Wait for Completion
 
-1. **Open Command Prompt** in your image folder
-2. **Run the executable**:
-   ```
-   img-resizer.exe
-   ```
+- A window will show the progress
+- You'll see real-time updates as files are processed
+- When done, press Enter to close
+
+### Step 5: Find Your Results
+
+Look for the `Resized` folder containing all your processed images.
 
 ## Example Output
 
@@ -131,9 +137,8 @@ My Photos/
 
 ## Requirements
 
-- **Windows** - This executable is built for Windows systems
-- **Mac/Linux** - The source code can be compiled for other platforms (see Technical Details)
-- **No installation** - Just copy and run
+- **Windows, Mac, or Linux** - Download the appropriate executable for your system
+- **No installation** - Just download and run
 - **No dependencies** - Self-contained executable
 
 ## Tips
@@ -170,23 +175,6 @@ My Photos/
 - **Resampling**: Lanczos (high quality)
 - **Output format**: Same as input format
 - **Compression**: Maintains original quality settings
-
-### Building for Other Platforms
-
-If you need a version for Mac or Linux, you can build it from source:
-
-```bash
-# Install Go from https://golang.org/
-
-# For Mac
-GOOS=darwin GOARCH=amd64 go build -o img-resizer main.go
-
-# For Linux
-GOOS=linux GOARCH=amd64 go build -o img-resizer main.go
-
-# For Windows
-GOOS=windows GOARCH=amd64 go build -o img-resizer.exe main.go
-```
 
 ---
 
