@@ -131,7 +131,8 @@ My Photos/
 
 ## Requirements
 
-- **Windows** - Built for Windows systems
+- **Windows** - This executable is built for Windows systems
+- **Mac/Linux** - The source code can be compiled for other platforms (see Technical Details)
 - **No installation** - Just copy and run
 - **No dependencies** - Self-contained executable
 
@@ -164,11 +165,28 @@ My Photos/
 
 ## Technical Details
 
-- **Language**: Go
+- **Language**: Go (cross-platform)
 - **Image library**: github.com/disintegration/imaging
 - **Resampling**: Lanczos (high quality)
 - **Output format**: Same as input format
 - **Compression**: Maintains original quality settings
+
+### Building for Other Platforms
+
+If you need a version for Mac or Linux, you can build it from source:
+
+```bash
+# Install Go from https://golang.org/
+
+# For Mac
+GOOS=darwin GOARCH=amd64 go build -o img-resizer main.go
+
+# For Linux
+GOOS=linux GOARCH=amd64 go build -o img-resizer main.go
+
+# For Windows
+GOOS=windows GOARCH=amd64 go build -o img-resizer.exe main.go
+```
 
 ---
 
